@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .xxx {
+            background-color: aqua;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 点击后按钮背景有颜色 -->
+    <button id="btn">点！</button>
+    <script>
+        // 可以通过改变元素类别，来改变一系列预设好的样式
+        var btn = document.getElementById('btn');
+        btn.onclick = function () {
+            this.className = 'xxx';
+            // this.setAttribute('class','xxx')
+        }
+    </script>
+</body>
+
+</html>

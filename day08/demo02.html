@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            height: 300px;
+            width: 300px;
+            position: relative;
+            top: 300px;
+            border: solid 1px #eee;
+            border-radius: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="im" src="../imgs/gm2-6.jpg" alt="">
+    <script>
+        var _left = _top = 0;
+
+        var img1 = document.getElementById('im');
+        console.log(img1.style.height);
+        var taskId = setInterval(function () {
+            img1.style.left = _left + 'px';
+            img1.style.top = _top + 'px';
+
+            if (img1.style.left == '400px') {
+                clearInterval(taskId);
+                img1.style.display = 'none';
+            }
+            _left += 20;
+            _top += 10;
+        }, 1000
+        )
+    </script>
+
+
+</body>
+
+</html>

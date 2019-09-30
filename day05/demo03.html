@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        #a{
+        #a {
             width: 300px;
             height: 300px;
             position: absolute;
             overflow: hidden;
             bottom: 0;
         }
-        #a>img{
+
+        #a>img {
             width: 100%;
         }
-        #a>#c{
+
+        #a>#c {
             /* width: 20px;
             height: 10px; */
             border: solid 2px black;
             background-color: aliceblue;
             position: absolute;
-            right:0;
+            right: 0;
             top: 0;
         }
-        #a>#c:hover{
+
+        #a>#c:hover {
             background-color: red;
         }
-
-    
     </style>
 </head>
+
 <body>
     <div id="a">
         <img src="../imgs/02.jpg" alt="">
         <div id="c">关闭</div>
     </div>
     <script>
-    var elem = document.getElementById("c");
-    var elem2= document.getElementById("a");
-    elem.onclick = function (){
-        elem2.style.display='none';
-    }
+        var elem = document.getElementById("c");
+
+        var elem2 = document.getElementById("a");
+        console.log(elem2.style.display)
+        elem.onclick = function () {
+            elem2.style.display = 'none';
+            console.log(elem2.style.display)
+        }
     </script>
 </body>
+
 </html>

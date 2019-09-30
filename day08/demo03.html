@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <span id="h"></span>
+    <span id="m"></span>
+    <span id="s"></span>
+
+    <script>
+        // 时间同步
+
+        var m = document.getElementById('m')
+        var s = document.getElementById('s')
+        var h = document.getElementById('h')
+        var stak = setInterval(function () {
+            var date = new Date();
+            m.innerText = date.getMinutes();
+            s.innerText = date.getSeconds();
+            h.innerText = date.getHours();
+        }, 1000)
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="javascript:window.history.back();">返回</a>
+
+    <p>b页面</p>
+    <a href="a.html">访问a</a>
+    <a href="c.html">访问c</a>
+    <script>
+        // 获取地址栏中的值
+        var url1 = location.href;
+        console.log(url1)
+
+        // 用'?' '&' '='来切割
+        // var str1 = url1.split('?')[1]
+        var i = url1.indexOf('?')
+        var str1 = url1.substring(i + 1)
+        console.log(str1)
+
+    </script>
+</body>
+
+</html>

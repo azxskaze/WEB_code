@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>停止兩秒后，自动跳转到其他页面demo03.html</p>
+    <a href="https://www.baidu.com/">百度</a>
+    <div>
+        <button id="btn">刷新</button>
+    </div>
+    <script>
+        // 用js改变链接，跳转链接
+        // var task = setTimeout(function () {
+        //     // var url1 = location.href 获取当前路径
+        //     location.href = 'demo03.html';/*赋值（改变当前路径）跳转到其他地方*/
+        // }, 2000)
+
+        // 刷新页面
+        var btn = document.getElementById('btn');
+        btn.onclick = function () {
+            location.reload(true);
+        }
+        
+    </script>
+</body>
+
+</html>

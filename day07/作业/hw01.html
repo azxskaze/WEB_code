@@ -12,7 +12,7 @@
         }
 
         p {
-            width: 400px;
+            width: 250px;
         }
     </style>
 </head>
@@ -34,6 +34,8 @@
     const str1 = p1.innerText
     function cz(chr, str) {
         var re1 = new RegExp(chr, 'g');
+        var list1 = str.match(re1);
+        console.log(list1);
         if (re1.test(str)) {
             // console.log('*', str.replace(re1, '<span>' + re1 + '</span>'))
             console.log(chr)
@@ -41,8 +43,10 @@
             console.log(chr1, '*')
 
             var chr2 = chr1.replace(']', '')
-            console.log(chr2)
-            return str.replace(re1, '<span>' + chr2 + '</span>');
+            console.log(chr2, re1)
+            var str2 = str.replace(re1, '<span>' + chr2 + '</span>');
+            console.log('****', str2)
+            return str2
         }
         else return false
     }
@@ -50,11 +54,15 @@
 
     btn.onclick = function () {
         p1.innerHTML = str1;
+
         var c = te.value;
-        c = "[" + c + "]"
+
+        // c = "[" + c + '+' + "]";
+        // console.log(c);
 
         var str3 = str1;
         var str2 = cz(c, str3);
+        console.log(str2);
         if (str2 != false) {
             p1.innerHTML = str2;
         }

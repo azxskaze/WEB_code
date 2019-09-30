@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            overflow: hidden;
+            width: 306px;
+            /* border: solid 1px sienna; */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -150px;
+        }
+
+        #box div {
+            margin: 0 5px 0 0;
+            height: 96px;
+            width: 95px;
+            float: left;
+            border: solid 1px tan;
+            box-shadow: 2px -3px 7px #666;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div class="bc"></div>
+        <div class="bc"></div>
+        <div class="bc"></div>
+    </div>
+    <script>
+        var elem = document.getElementsByClassName('bc');
+        elem[0].onclick = function () {
+            this.style.background = 'blue';
+        }
+        elem[1].onclick = function () {
+            this.style.background = 'yellow';
+        }
+        elem[2].onclick = function () {
+            this.style.background = 'red';
+        }
+        // 模拟点击
+        setTimeout(function () {
+            elem[0].click();
+        }, 2000)
+        setTimeout(function () {
+            elem[1].click();
+        }, 4000)
+        setTimeout(function () {
+            elem[2].click();
+        }, 6000)
+
+    </script>
+
+</body>
+
+</html>

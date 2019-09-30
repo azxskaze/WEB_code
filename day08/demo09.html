@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        form div label {
+            display: inline-block;
+            width: 90px;
+            text-align: right;
+
+        }
+
+        form div {
+            padding: 5px 0;
+
+        }
+
+        form {
+            width: 300px;
+            padding: 5px;
+            border: solid 1px #666;
+            border-radius: 8px;
+
+        }
+
+        #a {
+            /* margin-top: 10px; */
+            text-align: center;
+        }
+
+        .txt {
+            padding: 7px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 表单 当点击submit按钮时触发的事件(onsubmit="return/return false"其他事件没有return为可以提交
+        return false为不能提交) 用于提交时数据-->
+    <!-- 将return 后面的值写成一个函数，由函数返回值来决定是否能够提交 -->
+    <form action="" onsubmit="return login()">
+
+        <div>
+            <label for="name">用户名：</label>
+            <input placeholder="输入用户名" type="text" name="name" id="name" class="txt">
+        </div>
+        <div>
+            <label for="pass">密码：</label>
+            <input placeholder="输入密码" type="password" name="password" id="password" class="txt">
+        </div>
+        <div id="a">
+            <input type="submit" value="提交">
+            <input type="reset" value="重置">
+        </div>
+        <script>
+            // login函数用来返回逻辑判断结果
+            function login() {
+                var name = document.getElementById('name');
+                var pass = document.getElementById('password');
+                if (name.value != '' && pass.value !== '') {
+                    return true
+                }
+                else {
+                    if (name.value == '') {
+                        alert('用户名不能为空')
+
+                        // 使用户名文本框获取焦点
+                        name.focus();
+                        return false
+                    }
+                    else {
+                        alert('密码不能为空')
+
+                        // 使密码文本框获取焦点
+                        pass.focus();
+                        return false
+                    }
+                }
+            }
+        </script>
+    </form>
+</body>
+
+</html>
