@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        #s {
+            color: black;
+            text-decoration: none;
+        }
+
+        #te {
+            font-size: 12px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="a">
+        <span id="b" class="sp">大</span>
+        <span id="m" class="sp">中</span>
+        <span id="s" class="sp">小</span>
+        <div id="te">
+            如果四个属性值都必须设置，严格按照顺序书
+            size family 是必填项
+        </div>
+    </div>
+    <script>
+        function ov(elem) {
+            for (i = 0; i < 3; i++) {
+                elem[i].style.color = 'blue';
+                elem[i].style.textDecoration = 'underline';
+            }
+        }
+        function cl(id, elem, ob, i) {
+            ov(elem);
+            ob.style.fontSize = i;
+            id.style.color = 'black';
+            id.style.textDecoration = 'none';
+
+        }
+        var elem = document.getElementsByClassName('sp')
+        var b1 = document.getElementById('b')
+        var t1 = document.getElementById('te')
+        var m1 = document.getElementById('m')
+        var s1 = document.getElementById('s')
+        m1.onclick = function () {
+            console.log(t1.getAttribute('fon_size'))
+        }
+        b1.onclick = function () {
+            cl(b1, elem, t1, '22px')
+        }
+        m1.onclick = function () {
+            cl(m1, elem, t1, '16px')
+        }
+        s1.onclick = function () {
+            cl(s1, elem, t1, '10px')
+        }
+
+    </script>
+</body>
+
+</html>

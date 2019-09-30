@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #bu {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="a" src="../imgs/bk0-8.jpg" alt="">
+    <!-- <button id="bu">下一张</button> -->
+    <span id="bu">next</span>
+    <script>
+        var b = document.getElementById('a');
+        var bun = document.getElementById('bu');
+        bun.onclick = function () {
+            b.setAttribute('src', '../imgs/01.jpg')
+            console.log(bun.getAttribute('style{font-size}'))
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 413px;
+            height: 218px;
+            position: absolute;
+        }
+
+        #h {
+            height: 20px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: darkgrey;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .p {
+            height: 18px;
+            width: 101px;
+            float: left;
+            margin: 0;
+            padding: 0;
+            border: solid 1px darkgrey;
+            top: 1px;
+        }
+
+        .bo {
+
+            height: 198px;
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            display: none;
+        }
+
+        /* .bo {
+            height: 100%;
+            width: 100%;
+            
+        } */
+
+
+        /* .bo {
+            display: inline;
+        } */
+        #bo1 {
+            overflow: hidden;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            overflow: hidden;
+            margin: 0;
+            height: 48px;
+            width: 100%;
+        }
+
+        li {
+
+            /* margin: 10px 0 0 -40px; */
+            padding: 0;
+            float: left;
+            width: 133px;
+            height: 48px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div id="h">
+            <p class="p" id="rd">热点</p>
+            <p class="p" id="xw">新闻</p>
+            <p class="p" id="hz">合作</p>
+            <p class="p" id="yy">运营</p>
+        </div>
+        <div id="bo1" class="bo">
+            <ul>
+                <li>[运营攻略]</li>
+                <li>注意事项</li>
+                <li>2014-9-5</li>
+
+            </ul>
+            <ul>
+                <li>[运营攻略]</li>
+                <li>注意事项</li>
+                <li>2014-9-5</li>
+
+            </ul>
+            <ul>
+                <li>[运营攻略]</li>
+                <li>注意事项</li>
+                <li>2014-9-5</li>
+
+            </ul>
+            <ul>
+                <li>[运营攻略]</li>
+                <li>注意事项</li>
+                <li>2014-9-5</li>
+
+            </ul>
+
+
+        </div>
+        <div class="bo">xinwen</div>
+        <div class="bo">hezuo</div>
+        <div class="bo">yunying</div>
+    </div>
+    <script>
+        var elem = document.getElementsByClassName('p');
+
+        var elem1 = document.getElementsByClassName('bo');
+        console.log(elem1[3])
+        var h1 = document.getElementById('h');
+        var bo1 = document.getElementById('bo');
+
+        function q(elem, elem1) {
+            for (var i = 0; i < 4; i++) {
+                console.log(i, elem[i], elem1[i])
+                // elem[i].style.backgroundColor = 'blue';
+                elem[i].style.backgroundColor = 'darkgrey';
+                elem1[i].style.display = 'none';
+            }
+        }
+        function d(elem, elem1, id1, id2) {
+            q(elem, elem1);
+            id1.style.backgroundColor = 'skyblue';
+            console.log(11);
+            id2.style.display = 'inline';
+
+            console.log(id2);
+        }
+        elem[0].onclick = function () {
+            d(elem, elem1, elem[0], elem1[0])
+        }
+        elem[1].onclick = function () {
+            d(elem, elem1, elem[1], elem1[1])
+        }
+        elem[2].onclick = function () {
+            d(elem, elem1, elem[2], elem1[2])
+        }
+        elem[3].onclick = function () {
+            d(elem, elem1, elem[3], elem1[3])
+        }
+
+    </script>
+</body>
+
+</html>

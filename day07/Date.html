@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 创建当前日期，括号里面参数为空就是当前时间
+        var date = new Date();
+        // 分别取出年月日，时分秒
+        // 年
+        // var year = date.getFullYear();
+        // console.log(year);
+        // // 月 月份应该加1 不然会小
+        // var mounth = date.getMonth() + 1;
+        // console.log(mounth);
+        // // 日
+        // var day = date.getDate();
+        // console.log(day);
+        // // 时
+        // var hours = date.getHours();
+        // console.log(hours);
+        // // 分
+        // var minutes = date.getMinutes();
+        // console.log(minutes);
+        // // 秒
+        // var seconds = date.getSeconds();
+        // console.log(seconds);
+
+        // 整体（年月日时分秒）
+        console.log(date.getFullYear(),
+            date.getMonth() + 1,
+            date.getDate(),
+            date.getHours(),
+            date.getMinutes(),
+            date.getSeconds(),
+        );
+
+        // 按照格式输出
+        console.log(date)
+
+        // 计算两个时间相差的值
+        var date2 = new Date('1996-12-8 0:0:0');
+        console.log(date2);
+        // 定义变量保存两个时间之间的差值(得到的是一个毫秒数)
+        var ti = date - date2;
+        ti = ti / 1000 / 60 / 60 / 24 / 365;
+        console.log(ti);
+
+        // 创建日期对象(带年月日)
+        var date4 = new Date('2019/9/28');
+        console.log(date4);
+        // 年月日，时分秒
+        var date3 = new Date('2019/9/28 17:18:16');
+        console.log(date3);
+
+        // 读取当前时间的毫秒数(时戳)
+        var shijianchuo = date.getTime();
+        console.log(shijianchuo);
+
+    </script>
+</body>
+
+</html>

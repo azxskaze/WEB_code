@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Math对象，不需要实例化，可以直接调用
+        console.log(Math.PI, Math.E);
+
+        // 生成随机数,默认值为（0～1）
+        var i = Math.random(10) * 10 + 1;
+        console.log(i);
+
+        var i1 = 6.357650257435774;
+        // 向上取整，整数部分+1，小数部分忽略
+        var i2 = Math.ceil(i1)
+        console.log(i2)
+
+        // 向下取整，整数部分不变，小数部分忽略
+        var i3 = Math.floor(i1)
+        console.log(i3)
+
+        // 四舍五入取整
+        var i4 = Math.round(i)
+        console.log(i4)
+
+        // 配合取整方法可以生成理想的伪随机数
+        // 1~10
+        var one_ten = Math.ceil(Math.random() * 10)
+        console.log(one_ten)
+
+        // 0~9
+        var zero_nine = Math.floor(Math.random() * 10)
+        console.log(zero_nine)
+
+        // 0~10
+        var zero_ten = Math.round(Math.random() * 10)
+        console.log(zero_ten)
+
+
+    </script>
+</body>
+
+</html>

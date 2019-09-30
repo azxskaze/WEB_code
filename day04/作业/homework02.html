@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #a{
+        width: 597px;
+        height: 441px;
+        /* overflow: hidden; */
+        /* border: solid 1px red; */
+        
+    }
+    #a1{
+        float: left;
+        /* border: solid 1px red; */
+    }
+    #a1{
+        width: 60px;
+        height: 100%;
+    }
+    #a2{
+        height: 100%;
+        margin-left: 62px;
+        
+    }
+    #a11{
+        height: 330px;
+        width: 330px;
+        /* border: solid 2px black; */
+    }
+    #a11>div>img{
+        
+        padding-left: 5px;
+        padding-top: 5px;
+        width: 100px;
+        height: 100px;
+        float: left;
+    }
+    </style>
+</head>
+<body>
+    <div id="a">
+<div id="a1">
+    <img src="/home/tarena/学习笔记/第三阶段/web笔记/imgs/img04-1-4.png" alt="">
+</div>
+<div id="a2">
+    <b>BlueNileInc</b>
+    <div>
+            元素发生堆叠时可以使用 z-index 属性调整已定位元素的显示位置，值越大元素越靠上：
+            属性 : z-index
+            取值 : 无单位的数值,数值越大，越靠上
+            堆叠：
+            定位元素与文档中正常元素发生堆叠，永远是已定位元素在上
+            同为已定位元素发生堆叠，按照 HTML 代码的书写顺序，后来者居上
+            定位元素与文档中正常元素发生堆叠，永远是已定位元素在上
+            同为已定位元素发生堆叠，按照 HTML 代码的书写顺序，后来者居上
+    </div>
+    <div id="a11">
+        <div><img src="../imgs/01.jpg" alt=""></div>
+        <div><img src="../imgs/01.jpg" alt=""></div>
+        <div><img src="../imgs/01.jpg" alt=""></div>
+        <div><img src="../imgs/01.jpg" alt=""></div>
+        <div><img src="../imgs/01.jpg" alt=""></div>
+        <div><img src="../imgs/01.jpg" alt=""></div>
+        <div><img src="../imgs/01.jpg" alt=""></div>
+        <div><img src="../imgs/01.jpg" alt=""></div>
+        <div><img src="../imgs/01.jpg" alt=""></div>
+    </div>
+</div>
+    </div>
+    
+</body>
+</html>

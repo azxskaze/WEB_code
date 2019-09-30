@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // alert 会让浏览器一直等待用户点击，点击确定后语句才会结束
+        // 慎用
+    // alert('今天下冰雹！');
+    
+    document.write("<h3>今天</h3>");
+    </script>
+    
+    <!-- <button onclick="document.write('end')">
+        clear
+    </button> -->
+    <button id="btn">clear</button>
+        <script>
+        var i = document.getElementById("btn").onclick=function(){
+            
+           document.write('end');
+        }
+        i.write('aa');
+        </script>
+    <!-- 先添加元素 -->
+    <!-- <div id="a1">
+
+    </div> -->
+    <!-- <script>
+        //通过id查找元素(节点)
+    var elem = document.getElementById("a1")
+    </script> -->
+
+
+</body>
+</html>

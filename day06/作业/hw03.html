@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #a {
+            height: 297px;
+            width: 648px;
+            position: absolute;
+        }
+
+        #l,
+        #r {
+            position: absolute;
+            top: 50%;
+            margin-top: -30px;
+        }
+
+        #l {
+            left: 0;
+        }
+
+        #r {
+            right: 0;
+        }
+
+        #b {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="a">
+        <img id="b" src="../../imgs/img01-7.png" alt="">
+        <img src="../../imgs/l1-6.png" alt="" id="l">
+        <img src="../../imgs/r1-6.png" alt="" id="r">
+
+    </div>
+    <script>
+        var l1 = document.getElementById('l');
+        var r1 = document.getElementById('r');
+        var b1 = document.getElementById('b');
+        var list1 = ["../../imgs/gm4-6.jpg", "../../imgs/gm5-6.jpg", "../../imgs/img01-7.png"];
+        var j = 0;
+
+        function change() {
+            i = j % 3;
+            console.log(i, j, list1[i])
+            b1.setAttribute('src', list1[i]);
+        }
+
+        l1.onclick = function () {
+            if (j == 0) {
+                j = 2
+
+            }
+            else {
+                j -= 1;
+            }
+            change();
+
+        }
+        r1.onclick = function () {
+            j += 1;
+            change();
+
+        }
+
+
+    </script>
+</body>
+
+</html>

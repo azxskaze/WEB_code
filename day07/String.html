@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 创建方法1
+        var str = '100';
+
+        // 创建方法2
+        var str2 = new String('abcdefg hello');
+
+        // 获取长度
+        var len = str2.length;
+        console.log(len, str2);
+        // 字符串方法
+
+        // 大小写转换
+        // 转大写
+        var str21 = str2.toUpperCase()
+        console.log(str21, str2);
+        // 转小写
+        var str22 = str2.toLowerCase();
+        console.log(str22, str2);
+        // 获取字符 charAt(index)
+        var str23 = str2.charAt();
+        var str24 = str2.charAt(1);
+        console.log(str23, str24);
+        // 获取字符编码 (charset)charCodeAt(index)
+        var i = str2.charCodeAt();
+        var i1 = str2.charCodeAt(1);
+        console.log(i, i1);
+
+        // 查找字符位置，找不到返回值为-1
+        var i2 = str2.indexOf('h', 0);
+        var i3 = str2.indexOf('l', 4);
+        console.log(i2, i3);
+
+        // 字符串截取（左闭右开）结束位置省略则截取到尾部
+        var str25 = str2.substring(2, 6);
+        var str26 = str2.substring(2);
+        console.log(str25, str26);
+
+        // 不带ing 根据下标截取指定长度的字符串
+        var str27 = str2.substr(1, 3);
+        console.log(str27);
+
+        // 字符串分隔split（）
+        var str3 = 'https://www.baidu.com/s?ie=UTF-8&wd=dd'
+        var arr1 = str3.split('&');
+        console.log(arr1);
+
+        // 正则表达式
+        // var reg1 = /表达式内容/修饰符；修饰符；
+        // var reg2 = new RegExp('匹配模式'，'修饰符')；
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

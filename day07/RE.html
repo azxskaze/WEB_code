@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 正则表达式
+        // var reg1 = /表达式内容/修饰符；修饰符；
+        // var reg2 = new RegExp('匹配模式'，'修饰符')；
+
+
+        var str = 'aHbcTJdhehdHdf'
+
+        // 创建一个正则表达式对象(找c) i代表不区分大小写 g代表全局查找（默认只查找第一个）
+        var reg = /h/ig;
+        // var reg = new RegExp('h','i')
+
+        // obj.test(s)判断是否包含表达式内容（test（）是正则对象的一个方法）
+        var bool1 = reg.test(str);
+        console.log(bool1);
+
+        // match(reg)方法，将满足条件的字符串发到数组中（match是字符串的一个方法）
+        var arr1 = str.match(reg);
+        console.log(arr1);
+
+        // replacr(reg,newstr)方法，将满足条件的字符串替换为新字符串
+        var str2 = str.replace(reg, '$');
+        console.log(str2);
+
+
+    </script>
+</body>
+
+</html>

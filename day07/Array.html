@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 创建一个数组 1.字符变量
+        var arr = [];
+        // 实例化一个对象,默认长度为5
+        var arr2 = new Array(5);
+
+        var arr3 = [12, 26, 15];
+        // 访问数组元素，索引号从0开始
+        arr3[1] = 27;
+        console.log(arr3[1]);
+        // 获取长度
+        var len = arr3.length;
+        console.log(len);
+
+        //  往数组末尾追加，返回值为增加后的数组长度
+        var len2 = arr3.push(3, 12, 4, 5, 6, 21, 9, 7, 4);
+        console.log(len, arr3);
+
+        // pop()移除末尾元素并返回
+        var a = arr3.pop();
+        console.log(a, arr3);
+
+        //  往数组头部追加，返回值为增加后的数组长度
+        var len2 = arr3.unshift(0, 1, 2);
+        console.log(len2, arr3);
+
+        // shift()移除头部元素并返回
+        var b = arr3.shift();
+        console.log(b, arr3);
+
+        // splice(x,y) x下标（从下一个开始删除），y个数从数组中添加/杉树项目，并返回长度
+        var c = arr3.splice(0, 3);
+        console.log(c, arr3);
+
+        // 强转字符串(返回用逗号连接的字符串)
+        var d = arr3.toString()
+        console.log(d, arr3);
+
+        // 强转字符串(返回用指定符号连接的字符串)
+        var e = arr3.join('+')
+        console.log(e, arr3);
+
+        // 反转数组
+        var arr31 = arr3.reverse()
+        console.log(arr31, arr3);
+
+        // 排序（默认为升序）
+        var arr32 = arr3.sort()
+        console.log(arr32, arr3);
+
+        // 可以自定义排序方法
+        // 自定义升序
+        var arr33 = arr3.sort(function (a, b) {
+            return a - b
+        })
+        console.log(arr33, arr3);
+
+        // 自定义降序
+        var arr34 = arr3.sort(function (a, b) {
+            return b - a;
+        })
+        console.log(arr34, arr3);
+
+        // 二维数组
+        var arr4 = [[1, 2, 3], [4, 5, 6]];
+        arr4[1][2] = 7;
+        console.log(arr4)
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

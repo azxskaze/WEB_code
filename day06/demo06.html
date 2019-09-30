@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="a">
+        <li><b>1</b></li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <!-- <div>
+        <span class="red">4</span>
+        <span class="red">5</span>
+        <span class="red">6</span>
+    </div> -->
+
+    <script>
+        var elem = document.getElementsByTagName('li')
+        // console.log(elem[0], elem[1], elem[2])
+
+        console.log(elem[0].innerHTML, elem[0].innerText);
+
+        // 通过（.innerHTML）进行赋值
+        elem[0].innerHTML = '<b>这是第一条</b>'
+        elem[1].innerText = '这是第二条'
+        // var red1 = document.getElementsByClassName('red')
+        // console.log(red1[0], red1[1], red1[2])
+
+    </script>
+</body>
+
+</html>

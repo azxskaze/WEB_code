@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+    div{
+        width: 100px;
+        height: 100px;
+        border: solid 1px red;
+    }
+    #a{
+        /* 设置位置定位类型  相对定位（以原位置为参照物）*/
+        position: relative;
+        left: 5px;
+    }
+    #c1{
+        background-color: aqua;
+        width: 10px;
+        height: 10px;
+        /* 设置位置定位类型 绝对定位（以最近的父级定位元素为参照物
+        如果没有定位元素就用浏览器为参照物）*/
+        position: absolute;
+        /* 同一个轴上面只写一个 */
+        right: 0; 
+        /* bottom: 0;
+        top: 0;
+        left: 0;
+        
+    }
+    /* #box{
+        width: 300px;
+        border: solid 1px red;
+        height: 200px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+            
+    } */
+    </style>
+</head>
+<body>
+    <!-- <div></div>
+    <div id="a">
+        <div id="c1"></div>
+    </div> -->
+    
+    <!-- <div id="box"></div> -->
+</body>
+</html>

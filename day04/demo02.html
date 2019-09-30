@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .top,.body,.bottom{
+        width: 960px;
+        margin: 0 auto;
+    }
+    .top{
+        height: 32px;
+        border: solid 1px rgb(1, 1, 7);
+        background-color: blueviolet;
+    }
+    .body{
+        height: 500px;
+        border: solid 1px rgb(86, 231, 19);
+        background-color: rgb(235, 22, 22);
+        /* 具有包容性 */
+        overflow: hidden;
+    }
+    .body-left{
+        float: left;
+        width: 160px;
+        height: 500px;
+        background-color: aqua;
+    }
+    .body-right{
+        float: left;
+        width: 800px;
+        height: 500px;
+        background-color: lightsalmon;
+
+    }
+    
+    .bottom{
+        height: 32px;
+        border: solid 1px rgb(110, 15, 129);
+        background-color: rgb(71, 223, 25);
+    }
+    </style>
+</head>
+<body>
+    <div class="top"></div>
+
+    <div class="body">
+        <div class="body-left">
+
+        </div>
+        <div class="body-right"></div>
+    </div>
+    
+    <div class="bottom"></div>
+</body>
+</html>

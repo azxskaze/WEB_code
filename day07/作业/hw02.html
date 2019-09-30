@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="email">zhangsan@sina.com</p>
+    <p id="id">100233186012057663</p>
+    <script>
+        var email = document.getElementById('email');
+        var str1 = email.innerText;
+        var name = str1.split('@')[0];
+        var server = str1.split('@')[1];
+        console.log(name, server);
+
+        var id1 = document.getElementById('id');
+        str3 = id1.innerText;
+        str3 = '' + str3;
+        console.log(str3)
+        var year = str3.substr(6, 4);
+        var mounth = str3.substr(10, 2);
+        var day = str3.substr(12, 2);
+        console.log(year, mounth, day)
+
+    </script>
+</body>
+
+</html>

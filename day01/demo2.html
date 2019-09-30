@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 增加一个无序列表元素 -->
+   <ul>
+       <!-- 只是文字不一样,其他都一样 -->
+        <li>list1</li>
+       <li>list2</li>
+       <li>list3</li>
+   </ul> 
+   <!-- 增加一个有序列表 start代表起始值-->
+    <ol start="2">
+       <li>LIST1</li>
+       <li>LIST2</li>
+       <li>LIST3</li>
+   </ol> -->
+   <!-- 列表的嵌套 -->
+   <!-- <ol>
+       <li>西游记</li>
+        <ul>
+            <a target="_blank" href="https://baike.baidu.com/item/%E5%AD%99%E6%82%9F%E7%A9%BA/5576?fr=aladdin"><li>孙悟空</li></a>
+            
+            <li>猪八戒</li>
+            <li>沙和尚</li>
+        </ul>
+       <li>三国演义</li>
+       <ul>
+           <li>张飞</li>
+           <li>赵云</li>
+           <li>许褚</li>
+       </ul>
+   </ol> -->
+   <!-- 表格 -->
+   <!-- border="1"增加边框 -->
+
+   <table width="300" border="1">
+        <!-- caption标题可以设置表名 -->
+        <caption>
+            学生信息管理
+        </caption>
+       <!-- tr表示一行 -->
+       <tr>
+            <!-- th表示表头 -->
+            <th>姓名</th>
+            <th>年龄</th>
+             <th>班级</th>
+        </tr>
+       <tr>
+           <!-- td表示一列 -->
+           <td>张三</td>
+           <td>19</td>
+            <td>1401</td>
+       </tr>
+       <tr>
+            <!-- td表示一列 -->
+            <td>李四</td>
+            <td>20</td>
+             <td>1402</td>
+        </tr>
+   </table>
+
+    <table width='300' border="1">
+        <tr>
+            <th>姓名</th>
+            <!-- colspan跨列合并 -->
+            <th colspan="2">电话</th>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>053-5353118</td>
+            <td>15632654985</td>
+        </tr>
+    </table>
+
+    <table border="1" width="300">
+        <tr>
+            <th>姓名</th>
+            <td>张三</td>
+        </tr>
+
+        <tr>
+            <th rowspan="2">电话</th>
+            <td>010-456595</td>
+        </tr>
+        <tr>
+            <td>12659856324</td>
+        </tr>
+    </table>
+</body>
+</html>

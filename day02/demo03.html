@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* #a{
+            color: red
+        }
+        .red{
+            color: red
+        } */
+        /* 使用群组选择器 */
+        /* #a,.red{
+            color: red
+        } */
+        /* 使用后代选择器分别获取div元素中的p元素 */
+        #a>p{
+            background: red
+        }
+        #b>p{
+            background: blue
+        }
+    </style>
+</head>
+<body>
+    <!-- 群组选择器，不同的选择器使用相同的属性 -->
+    <!-- <p id="a">第一句话</p>
+    <div>a
+        <div class="red">b
+            <div>c</div>
+        </div>
+    </div> -->
+    <!-- <ul>
+        <li>A</li>
+        <li class="red">B</li>
+        <li id="a">C</li>
+        <li>D</li>
+        <li>E</li>
+    </ul> -->
+    <div id="a">
+        <p>aa</p>
+    </div>
+    <div id="b">
+        <p>cc</p>
+    </div>
+</body>
+</html>

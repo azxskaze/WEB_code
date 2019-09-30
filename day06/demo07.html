@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="text" type="text" placeholder="请输入姓名：">
+    <button id="bu">取值</button>
+
+    <script>
+        var b = document.getElementById('bu');
+        var te = document.getElementById('text')
+        te.value = '初始值'
+        b.onclick = function () {
+            var v = te.value
+
+            console.log(te.getAttribute('name'))
+        }
+    </script>
+</body>
+
+</html>

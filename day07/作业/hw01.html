@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+        }
+
+        p {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input id="te" type="text" name="text">
+    <button id="btn">查找</button>
+    <p id="p1">数组用于存储若干数据,自动为每位数据分配下标,从0开始
+        + 数组中的元素不限数据类型,长度可以动态调整
+        + 动态操作数组元素 ：根据元素下标读取或修改数组元素，arr[index]</p>
+</body>
+<script>
+
+    var te = document.getElementById('te');
+    var btn = document.getElementById('btn');
+    var p1 = document.getElementById('p1');
+
+    const str1 = p1.innerText
+    function cz(chr, str) {
+        var re1 = new RegExp(chr, 'g');
+        if (re1.test(str)) {
+            // console.log('*', str.replace(re1, '<span>' + re1 + '</span>'))
+            console.log(chr)
+            var chr1 = chr.replace('[', '')
+            console.log(chr1, '*')
+
+            var chr2 = chr1.replace(']', '')
+            console.log(chr2)
+            return str.replace(re1, '<span>' + chr2 + '</span>');
+        }
+        else return false
+    }
+
+
+    btn.onclick = function () {
+        p1.innerHTML = str1;
+        var c = te.value;
+        c = "[" + c + "]"
+
+        var str3 = str1;
+        var str2 = cz(c, str3);
+        if (str2 != false) {
+            p1.innerHTML = str2;
+        }
+
+
+
+    }
+</script>
+
+</html>

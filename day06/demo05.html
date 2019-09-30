@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 1;
+
+        function cc() {
+            // 在函数体里面，用var定义的变量为局部变量，如果不加var
+            // 则为全局变量
+            var b = 2;
+            c = 3;
+            console.log('ok', a)
+            function cc1(n) {
+                console.log(n, 'cc1')
+
+            }
+            cc1(b);
+        }
+        cc();
+        console.log(c);
+
+        cc1();
+    </script>
+</body>
+
+</html>

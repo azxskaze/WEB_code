@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 需求：截取指定字符串sasd
+        // 先查找字符串在字符串里面的位置
+        var str = 'samjdsfjmkytksasddfkioep'
+        var pos = str.indexOf('sasd')
+        var obj = str.substr(pos, 4)
+        console.log(obj)
+
+        // 定义一个需要分割的字符串
+
+        // var str1 = 'a1=d&b3=iy&sa=78'
+        // var arr1 = str1.split('&')
+        // for (var i = 0; i < arr1.length; i++) {
+        //     // if (arr1[i].indexOf('a1') >= 0) {
+        //     //     console.log((arr1[i].split('=')[1]))
+        //     var arr2 = arr1[i].split('=')
+        //     console.log(arr2)
+        // }
+
+        // 查找特定项目参数值函数
+        function getVal(k) {
+            var str1 = 'a1=d&b3=iy&sa=78'
+            var arr1 = str1.split('&')
+            for (var i = 0; i < arr1.length; i++) {
+                if (arr1[i].indexOf(k) >= 0) {
+                    return arr1[i].split('=')[1]
+                }
+            }
+        }
+        console.log(getVal('a1'))
+        console.log(getVal('b3'))
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 固定定位 -->
+    <style>
+        body{
+            font-family: Arial,'黑体';
+            font-weight: bold;
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            /* overflow: hidden; */
+        }
+
+        ul>li{
+            /* float: right; */
+            float: left;
+            margin:  0 10px;
+            padding: 5px 0;
+        }
+
+        #nav1{
+            color: #fff;
+            background-color: rgb(54, 71, 128);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        #nav2{
+            color: #fff;
+            background-color: rgb(165, 180, 77);
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+        p{
+            margin-top: 40px;
+        }
+        .left,.right{
+            border: solid 1px rgb(161, 67, 161);
+            width: 100px;
+            height: 300px;
+            position: fixed;
+            top: 200px;
+        }
+        .left{
+            left: 0;
+        }
+        .right{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav1">
+        <ul>
+            <li>首页</li>
+            <li>国内</li>
+            <li>国际</li>
+        </ul>
+        </div>
+        <p>这是一个导航栏</p>
+        <div style="height:1000px"></div>
+        </div>
+
+    <div id="nav2">
+            <ul>
+                <li>首页</li>
+                <li>国内</li>
+                <li>国际</li>
+            </ul>
+            </div>
+    <div class="left"></div>
+    <div class="right"></div>
+</body>
+</html>

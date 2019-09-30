@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        a{
+            color: #666;
+            text-decoration: none;
+        }
+    #a{
+        
+        width: 165px;
+        height: 54px;
+        border: solid 1px #eee;
+        text-align: center;
+        line-height: 54px;
+        /* overflow: hidden; */
+        position: relative;
+    }
+    #a>#a1,#a>span{
+        position:absolute;
+        
+    }
+    #a>span{
+        color: rgb(255, 255, 255);
+        
+        top: -23px;
+        left: 127px;
+        z-index: 2;
+    }
+    #a>#a1{
+        
+        padding: 0;
+        margin: 0;
+        width: 15px;
+        height: 15px;
+        border:solid 1px red; 
+        background-color: red;
+        border-radius: 10px 10px 10px 0;
+        top: -6px;
+        left: 124px;
+        
+    }
+    </style>
+</head>
+<body>
+    <div id="a">
+       <a href=""> 我的购物车   &nbsp;&nbsp;&nbsp;&nbsp;&gt</a>
+       <span>1</span>
+        <div id="a1">
+        </div>
+        <!-- <div>1</div> -->
+        
+    </div>
+</body>
+</html>
