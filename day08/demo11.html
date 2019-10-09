@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #a {
+
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .aa {
+            float: left;
+            margin: 0;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            border: solid 1px red;
+            background-color: red;
+            color: #eee;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        span {
+            display: inline-block;
+            padding-top: 5px;
+            padding-right: 4px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="a">
+        <div class="aa">
+            <span>15</span>
+        </div>
+    </div>
+    <script>
+        function creatrRandArr(len, max) {
+            var arr = []
+            while (arr.length < len) {
+                var i = Math.floor(Math.random() * max);
+                var str1 = arr + '';
+                if (str1.indexOf(i) == -1) {
+                    if ((i < 10) && (max < 10)) {
+                        i = '0' + i;
+                    }
+                    else {
+                        i = '' + i;
+                    }
+                    arr.push(i);
+                }
+            }
+            return arr
+        }
+        console.log(creatrRandArr(10, 20))
+        arr = creatrRandArr(10, 20)
+        text = '';
+        for (var j = 0; j < arr.length; j++) {
+            text += '<div class="aa"><span>' + arr[j] + '</span></div>'
+        }
+        var a = document.getElementById('a');
+        a.innerHTML = text;
+    </script>
+</body>
+
+</html>

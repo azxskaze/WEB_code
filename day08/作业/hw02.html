@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #a>ul>li {
+            /* padding: 5px; */
+            /* margin: 0; */
+            line-height: 30px;
+            text-align: center;
+            list-style: none;
+            height: 30px;
+            width: 30px;
+            border: solid 1px orange;
+            border-radius: 15px;
+            background-color: orange;
+            position: relative;
+            /* z-index: 10; */
+            /* right: 0; */
+        }
+
+        #a>ul {
+            /* float: right; */
+            position: absolute;
+            right: 0;
+
+        }
+
+        #a {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+            width: 300px;
+        }
+
+        img {
+            height: 200px;
+            width: 300px;
+            float: left;
+            /* z-index: -1; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="a">
+        <img src="../../imgs/bk1-8.jpg" alt="">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+    <script>
+        var arr = ["../../imgs/bk1-8.jpg", "../../imgs/bk2-8.jpg",
+            "../../imgs/bk3-8.jpg", "../../imgs/bk4-8.jpg"
+
+        ]
+    </script>
+</body>
+
+</html>

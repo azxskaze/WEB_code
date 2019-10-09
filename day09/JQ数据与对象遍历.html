@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>22</li>
+        <li>333</li>
+        <li>4444</li>
+        <li>55555</li>
+    </ul>
+    <script>
+        // 查询到全部的li元素（后代选择器）
+        // 遍历元素
+        $('ul li').each(
+            // 回调函数（function(index,element){}）参数必须写
+            function (idx, ele) {
+                console.log(idx, ele)
+                // idx为元素下标，ele为取到的元素本身
+                console.log($(ele).text())
+
+                // 通过元素里面的内容来找到元素
+                if ($(ele).text() == '333') {
+                    $(ele).css('color', 'red')
+                }
+
+            }
+        )
+
+        // 遍历数据
+        var arr = ['chole', 'max', 'richo', 'venna'];
+        // 遍历数组
+        $.each(arr, function (idx, data) {
+            // idx为下标（索引），data为取到的数据
+            console.log(idx, data);
+        })
+
+    </script>
+</body>
+
+</html>

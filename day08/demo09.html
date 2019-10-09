@@ -24,6 +24,11 @@
             padding: 5px;
             border: solid 1px #666;
             border-radius: 8px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -150px;
+            margin-top: -100px;
 
         }
 
@@ -53,36 +58,61 @@
             <input placeholder="输入密码" type="password" name="password" id="password" class="txt">
         </div>
         <div id="a">
-            <input type="submit" value="提交">
+            <input type="submit" id="sub" value="提交">
             <input type="reset" value="重置">
         </div>
-        <script>
-            // login函数用来返回逻辑判断结果
-            function login() {
-                var name = document.getElementById('name');
-                var pass = document.getElementById('password');
-                if (name.value != '' && pass.value !== '') {
-                    return true
+    </form>
+    <button id="log">模拟登陆</button>
+    <script>
+
+        // login函数用来返回逻辑判断结果
+        function login() {
+            var name = document.getElementById('name');
+            var pass = document.getElementById('password');
+
+            if (name.value != '' && pass.value !== '') {
+                return true
+            }
+            else {
+                if (name.value == '') {
+                    alert('用户名不能为空')
+
+                    // 使用户名文本框获取焦点
+                    name.focus();
+                    return false
                 }
                 else {
-                    if (name.value == '') {
-                        alert('用户名不能为空')
+                    alert('密码不能为空')
 
-                        // 使用户名文本框获取焦点
-                        name.focus();
-                        return false
-                    }
-                    else {
-                        alert('密码不能为空')
-
-                        // 使密码文本框获取焦点
-                        pass.focus();
-                        return false
-                    }
+                    // 使密码文本框获取焦点
+                    pass.focus();
+                    return false
                 }
             }
-        </script>
-    </form>
+
+        }
+        var log = document.getElementById('log');
+        var sub = document.getElementById('sub');
+        var arr1 = ['a', 'b', 'c']
+        var arr2 = ['123', '324', '156']
+
+        // for (var i = 0; i < arr1.length; i++) {
+        //     var j = 0;
+        //     var name = document.getElementById('name');
+        //     var pass = document.getElementById('password');
+        //     console.log(arr1[i], arr2[j])
+        //     name.value = arr1[i];
+        //     setInterval(function () {
+        //         pass.value = arr2[j];
+        //         sub.click();
+
+
+        //     }, 1000)
+        // }
+
+    </script>
+
+
 </body>
 
 </html>

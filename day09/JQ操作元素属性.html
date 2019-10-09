@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 样式要写在导入的JQ或者js之前，因为JQ文件都是逻辑代码，
+    相对于样式来说加载起来比较慢，所以先写样式，再导入JQ -->
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+
+    <script src="./js/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <div id="tip">
+        强大的JQ框架
+    </div>
+    <div id="tip2">
+        强大的JQ框架
+    </div>
+    <script>
+
+        // 将tip的class值设置为red
+        $('#tip').attr('class', 'red');
+
+        // 获取tip元素的class属性值赋给xxx
+        var xxx = $('#tip').attr('class')
+
+        // 将tip2的class值设置为tip的class值
+        $('#tip2').attr('class', xxx)
+
+        // 过两秒之后将tip2的class属性移除
+        var stak = setTimeout(
+            function () {
+                $('#tip2').removeAttr('class')
+                clearTimeout(stak);
+            }, 2000
+        )
+
+
+    </script>
+</body>
+
+</html>

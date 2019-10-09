@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #ball {
+            height: 50px;
+            width: 50px;
+            border-radius: 25px;
+            background-color: orange;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div id="ball"></div>
+    <script>
+        $('#ball').animate(
+            {
+                'left': '300px',
+            },
+            1000,
+            // 回调函数（让小球再回来）
+            function () {
+                // alert('执行完成')
+                $('#ball').animate(
+                    {
+                        'left': '5px',
+                    }, 1000,
+                    // 回调函数（让小球隐藏）
+                    function () {
+                        $('#ball').fadeOut(), 1000,
+                        function(){
+                            
+                        }
+                    })
+            }
+        )
+        window.onload = function () {
+            // 只能执行一个onload事件
+            alert('页面执行完成后出发的事件')
+        }
+    </script>
+</body>
+
+</html>

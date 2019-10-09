@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="tip">今天天气..
+    </div>
+    <script>
+
+        // 用标签语法创建一个子类元素
+        var div = '<div>子类元素</div>';
+
+        // 获取到子类元素
+        $obj = $(div);
+
+        // 将子类元素追加到指定元素后面（作为子元素）
+        $('#tip').append($obj);
+
+        // 将子类元素添加到指定元素的最前面（作为子元素）
+        $('#tip').prepend($obj);
+        
+    </script>
+</body>
+
+</html>

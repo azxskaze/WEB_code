@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .a {
+            overflow: hidden;
+            width: 200px;
+            height: 30px;
+            border: solid 1px #666;
+        }
+
+        .a input,
+        .a p {
+            display: inline-block;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            border-right: solid 1px #666;
+            border-left: solid 1px #666;
+
+            background-color: #fff;
+        }
+
+        p {
+            width: 190px;
+        }
+    </style>
+    <script src="../js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="a">
+        <input type="checkbox" name="" id="">
+        <p>python</p>
+    </div>
+
+    <div class="a"><input type="checkbox" name="" id="">
+        <p>c++</p>
+    </div>
+    <div class="a"><input type="checkbox" name="" id="">
+        <p>java</p>
+    </div>
+    <div class="a"><input type="checkbox" name="" id="">
+        <p>matlab</p>
+    </div>
+    <div class="a"><input type="checkbox" name="" id="">
+        <p>c#</p>
+    </div>
+    <div class="a"><input type="checkbox" name="" id="">
+        <p>php</p>
+    </div>
+    <script>
+        $('.a:odd').css({ 'background-color': '#666' });
+        $('.a>p:odd').css({ 'background-color': '#666' });
+
+    </script>
+</body>
+
+</html>

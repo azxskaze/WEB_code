@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 生成一个0～9的随机数、
+        var arr1 = []
+        var i = Math.floor(Math.random() * 10)
+        // arr1.push(i)
+        // 生成一个1～10的随机数、
+        // var i2 = Math.ceil(Math.random()*10)
+        while (arr1.length < 4) {
+            var i = Math.floor(Math.random() * 10)
+
+            // 转换成字符串查找
+            var str1 = arr1 + '';
+            if (str1.indexOf(i) == -1) {
+                arr1.push(i);
+            }
+        }
+        console.log(arr1)
+
+    </script>
+</body>
+
+</html>

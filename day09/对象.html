@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        // 对象的定义方法：
+        // var xxx = {}
+        // 里面的数据格式类似于字典，
+        // 里面的值可以是其他的数据类型，也可以是方法（函数）
+        var y = {
+            a: 1,
+            'b': function cc(vv) {
+                console.log('ok', vv);
+            }
+        }
+
+        console.log(y.a);
+        y.b('5454');
+
+        $(function () {
+            // 页面元素加载成功后执行的函数（安全事件）
+            alert('11')
+        });
+        $(function () {
+            alert('22')
+        })
+    </script>
+</body>
+
+</html>

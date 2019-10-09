@@ -1,4 +1,5 @@
-var data = [{
+var data = [
+    {
         provname: '浙江省',
         provId: 1,
         citys: [{
@@ -46,7 +47,8 @@ var data = [{
             }]
 
         }]
-    }, {
+    }, 
+    {
         provname: '山东省',
         provId: 2,
         citys: [{

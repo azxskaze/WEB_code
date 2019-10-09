@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <script src="./js/data.js"></script>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- 先添加三个下拉列表框元素 -->
+    <select name="prov" id="prov"></select>
+    <!-- <option value=""></option> -->
+
+    <select name="city" id="city"></select>
+
+    <select name="area" id="area"></select>
+    <script>
+        var $prov = $('#prov')
+        var $city = $('#city')
+        var $area = $('#area')
+
+
+        $(function () {
+            // 遍历数组先取出省（每个外层对象就是一个省）
+            $.each(data, function (i, e) {
+                $prov.append('<option value="' + e.provId +
+                    '">' + e.provname + '</option>')
+
+            })
+
+            // 市
+            // 绑定change事件（在下拉框里面选择事件）
+            $prov.bind('change', function () {
+                $.each(data, function (i, e) {
+
+                    if ($prov.val() == e.provId) {
+                        $city.html('<option value="0">请选择</option>')
+                        // 如果选中的是某个省将省里面的所有市取出
+                        $.each(e.citys, function (i, e2) {
+
+                            $city.append('<option value="' + e2.cityId +
+                                '">' + e2.cityname + '</option>')
+                        })
+
+                    }
+
+
+
+
+                })
+
+            })
+
+
+            // 区   
+
+            $city.on('change', function () {
+                $.each(data, function (i, e) {
+                    if (e.provId == $prov.val()) {
+                        $.each(e.citys, function (i, e2) {
+                            if (e2.cityId == $city.val()) {
+                                $area.html('<option value="0">请选择</option>')
+                                $.each(e2.areas, function (i, e3) {
+
+                                    $area.append('<option value="' + e3.areaId +
+                                        '">' + e3.areaname + '</option>')
+
+                                })
+
+                            }
+                        })
+                    }
+                })
+
+            })
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="imgs"> <img src="../imgs/img02-8.jpg" alt=""></div>
+
+    <div>
+        <button class="btn">隐藏</button>
+
+        <button class="btn2">上推</button>
+
+        <button class="btn3">淡隐</button>
+
+    </div>
+    <script>
+        // 直接消失
+        $('.btn').bind('click', function () {
+            if ($('.btn').text() == '隐藏') {
+                // 隐藏图片
+                // $('img').css('display','none')
+                $('img').hide(100, function () {
+                    $('.btn').text('显示')
+                });
+            }
+
+            else {
+                // 显示图片
+                $('img').show(100, function () {
+                    $('.btn').text('隐藏')
+                });
+            }
+        })
+        // 上推下拉
+        $('.btn2').bind('click', function () {
+
+            // $('img').slideUp(3000)并没有效果
+            // img元素为行内块元素
+            // 上推下拉只针对块元素才有用
+
+            if ($('.btn2').text() == '上推') {
+                // 上推图片
+                $('#imgs').slideUp(1000, function () {
+                    $('.btn2').text('下拉')
+                })
+            }
+
+            else {
+                // 下拉图片
+                $('#imgs').slideDown(1000, function () {
+                    $('.btn2').text('上推')
+                });
+            }
+        })
+
+        // 淡隐
+        $('.btn3').bind('click', function () {
+
+            if ($('.btn3').text() == '淡隐') {
+
+                $('#imgs').fadeOut(1000, function () {
+                    $('.btn3').text('淡现')
+                })
+            }
+
+            else {
+
+                $('#imgs').fadeIn(1000, function () {
+                    $('.btn3').text('淡隐')
+                });
+            }
+        })
+
+        
+
+    </script>
+</body>
+
+</html>

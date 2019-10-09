@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="p">
+        <div id="c1">原来就有的</div>
+    </div>
+    <script>
+
+        // 向前面增加一个div元素（作为子元素）
+        $('#p').prepend($('<div id="c0">前面</div>'))
+
+        // 向后增加一个div元素（作为子元素）
+        $('#p').append($('<div id="c2">后面</div>'))
+
+        // 在#p元素后添加一个兄弟元素
+        $('#p').after($('<div id="p2">兄弟元素-后面</div>'))
+
+        $('#p').before($('<div id="p1">兄弟元素-前面</div>'))
+
+
+
+
+    </script>
+</body>
+
+</html>

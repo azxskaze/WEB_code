@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div>div中的文本
+        <p>p中的文本</p>
+        <img src="./作业/作业1.png" alt="">
+    </div>
+    <script>
+        var $d = $('div')
+        console.log($d.text())//操作内容
+        // text('sss')将里面的内容设置为sss，
+        // 参数不写就代表获取，写了就代表设置
+        console.log($d.html())
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="tip">今天天气..</div>
+    <script>
+        // 通过JQ中css()方法修改内联样式，css()中要写成json格式（字典格式）
+        $('#tip').css({
+            'color': 'blue',
+            'font-size': '32px'
+        })
+    </script>
+</body>
+
+</html>
