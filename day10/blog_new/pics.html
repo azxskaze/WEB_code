@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/scrollReveal.js"></script>
+    <script src="js/system.js"></script>
+</head>
+
+<body>
+    <div id="nav">
+        <div class="con">
+            <div class="log">个人博客</div>
+            <ul>
+                <li><a href="index.html">网站首页</a></li>
+                <li><a href="list.html">文章列表</a>
+                    <ul id="sub_nav">
+                        <li><a href="">Python</a></li>
+                        <li><a href="">Python Web</a></li>
+                        <li><a href="">爬虫</a></li>
+                        <li><a href="">人工智能</a></li>
+                        <li><a href="">JS实例索引</a></li>
+                    </ul>
+                </li>
+                <li><a href="pics.html" class="focus">我的相册</a></li>
+                <li><a href="">时间轴</a></li>
+                <li><a href="">留言</a></a></li>
+                <li><a href="">关于我</a></li>
+                <li><a href="send.html">发表博客</a></li>
+            </ul>
+            <div class="act"><a href="login.html">登录</a><a href="">注册</a>
+            </div>
+        </div>
+    </div>
+    <div class="bgimg"></div>
+    <div class="title">'
+        <div class="ltip">
+            文章列表
+        </div>
+        <div class="rtip">
+            不要轻易放弃，学习成长的路上，我们长路漫漫，只因学无止境。
+        </div>
+    </div>
+    <div class="items">
+        <div class="item" data-scroll-reveal="bottom 10px 3 1">
+            <figure>
+                <img src="images/a.jpg" alt="">
+            </figure>
+            <span>喜欢 | 290</span>
+            <p>Python基础学习总结Python基础学习总结Python基础学习总结</p>
+        </div>
+        <div class="item" data-scroll-reveal="bottom 10px 3 1">
+            <figure>
+                <img src="images/b.jpg" alt="">
+            </figure>
+            <span>喜欢 | 390</span>
+            <p>Python基础学习总结</p>
+        </div>
+        <div class="item" data-scroll-reveal="bottom 10px 3 1">
+            <figure>
+                <img src="images/c.jpg" alt="">
+            </figure>
+            <span>喜欢 | 390</span>
+            <p>Python基础学习总结</p>
+        </div>
+        <div class="item" data-scroll-reveal="bottom 10px 3 1">
+            <figure>
+                <img src="images/d.jpg" alt="">
+            </figure>
+            <span>喜欢 | 590</span>
+            <p>Python基础学习总结</p>
+        </div>
+    </div>
+    <div class="items">
+        <div class="item" data-scroll-reveal="bottom 10px 3 1">
+            <figure>
+                <img src="images/bi05.jpg" alt="">
+            </figure>
+            <span>喜欢 | 190</span>
+            <p>Python基础学习总结</p>
+        </div>
+        <div class="item" data-scroll-reveal="bottom 10px 3 1">
+            <figure>
+                <img src="images/commentPhoto.jpg" alt="">
+            </figure>
+            <span>喜欢 | 790</span>
+            <p>Python基础学习总结</p>
+        </div>
+        <div class="item" data-scroll-reveal="bottom 10px 3 1">
+            <figure>
+                <img src="images/v2.jpg" alt="">
+            </figure>
+            <span>喜欢 | 390</span>
+            <p>Python基础学习总结</p>
+        </div>
+        <div class="item" data-scroll-reveal="bottom 10px 3 1">
+            <figure>
+                <img src="images/avatar.jpg" alt="">
+            </figure>
+            <span>喜欢 | 690</span>
+            <p>Python基础学习总结</p>
+        </div>
+    </div>
+    <footer id="footer">
+        <p>Design by <a href=# target="_blank">程序博客</a> <a href="#">备20013433号-1</a></p>
+    </footer>
+    <script>
+        //初始化滚动显示框加
+        window.scrollReveal = new scrollReveal({
+            reset: true
+        })
+        //绑定导航条中二级列表的菜单动画
+        $("#nav ul li:nth-child(2)").hover(function () {
+            //找到子类列表，停止当前动画，并显示
+            $(this).children("ul").stop(true, true).show(400);
+        }, function () {
+            //找到子类列表，停止当前动画，并隐藏
+            $(this).children("ul").stop(true, true).hide(400);
+        })
+    </script>
+</body>
+
+</html>

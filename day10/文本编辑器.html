@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <!-- 导入JQ -->
+    <script src="./blog_new/js/jquery.min.js"></script>
+    <!-- 1.导入插件 -->
+    <script src="./blog_new/js/wangEditor.js"></script>
+</head>
+
+<body>
+    <!-- 2.添加一个绑定编辑器的元素 -->
+    <div id="tip">
+
+    </div>
+    <button id="btn">获取内容</button>
+    <script>
+        var E = window.wangEditor;
+        // 3.实例化对象(指定元素)
+        var editor = new E('#tip');
+
+        // 4.创建插件
+        editor.create();
+        // 给按钮绑定事件
+        $('#btn').on('click', function () {
+
+            // 获取文本内容并保存在变量中
+            var text = editor.txt.text();
+            // 获取html内容并保存在变量中
+            var html = editor.txt.html();
+            // 将内容输出在控制台
+            console.log(text, html)
+        })
+    </script>
+</body>
+
+</html>

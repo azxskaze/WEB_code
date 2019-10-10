@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        a {
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            color: aqua;
+        }
+
+
+        #img {
+            display: none;
+            /* display: grid; */
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <a id="a1" href="">图片</a></div>
+    <div id="img">
+        <img src="../imgs/img02-8.jpg" alt="">
+    </div>
+    <script>
+        var $a1 = $('#a1');
+        var $img = $('#img')
+
+        $a1.hover(function () {
+            // 淡现
+            $img.fadeIn(200)
+        }, function () {
+            // 淡隐
+            $img.fadeOut(200)
+        })
+    </script>
+</body>
+
+</html>

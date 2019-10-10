@@ -14,48 +14,56 @@
             border: solid 1px #666;
         }
 
-        .a input,
-        .a p {
-            display: inline-block;
+        .a input{
             text-align: center;
             margin: 0;
             padding: 0;
-            float: left;
             height: 30px;
             line-height: 30px;
             border-right: solid 1px #666;
             border-left: solid 1px #666;
-
+            background-color: #fff;}
+        .a p {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 30px;
+            line-height: 30px;
+            border-right: solid 1px #666;
+            border-left: solid 1px #666;
             background-color: #fff;
         }
 
         p {
             width: 190px;
+            border-left: solid 1px #666;
         }
     </style>
     <script src="../js/jquery.min.js"></script>
 </head>
 
 <body>
-    <div class="a">
-        <input type="checkbox" name="" id="">
-        <p>python</p>
-    </div>
+    <div>
+        <div class="a">
+            <input type="checkbox" name="" id="">
+            <p>python</p>
+        </div>
 
-    <div class="a"><input type="checkbox" name="" id="">
-        <p>c++</p>
-    </div>
-    <div class="a"><input type="checkbox" name="" id="">
-        <p>java</p>
-    </div>
-    <div class="a"><input type="checkbox" name="" id="">
-        <p>matlab</p>
-    </div>
-    <div class="a"><input type="checkbox" name="" id="">
-        <p>c#</p>
-    </div>
-    <div class="a"><input type="checkbox" name="" id="">
-        <p>php</p>
+        <div class="a"><input type="checkbox" name="" id="">
+            <p>c++</p>
+        </div>
+        <div class="a"><input type="checkbox" name="" id="">
+            <p>java</p>
+        </div>
+        <div class="a"><input type="checkbox" name="" id="">
+            <p>matlab</p>
+        </div>
+        <div class="a"><input type="checkbox" name="" id="">
+            <p>c#</p>
+        </div>
+        <div class="a"><input type="checkbox" name="" id="">
+            <p>php</p>
+        </div>
     </div>
     <script>
         $('.a:odd').css({ 'background-color': '#666' });

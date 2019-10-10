@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            height: 200px;
+            width: 300px;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <button id="left">←</button>
+        <img id="img" src="../imgs/01.jpg" alt="">
+        <button id="right">→</button>
+        <p id="p1"></p>
+
+    </div>
+    <script>
+        var arr = [
+            {
+                'url': '../imgs/01.jpg',
+                'tip': '降价'
+            },
+            {
+                'url': '../imgs/02.jpg',
+                'tip': '抢券'
+            },
+            {
+                'url': '../imgs/03.jpg',
+                'tip': '新品'
+            },
+        ]
+        var i = 0;
+        $('#left').on('click', function () {
+            $('#img').fadeOut(500, function () {
+                i--
+                if (i < 0) {
+                    i = arr.length - 1;
+
+
+                }
+                $('#img').attr('src', arr[i].url);
+                $('#img').fadeIn(500)
+                $('#p1').text(arr[i].tip)
+
+
+            })
+        })
+
+
+        $('#right').on('click', function () {
+            $('#img').fadeOut(500, function () {
+                i++
+                if (i > arr.length - 1) {
+                    i = 0;
+
+
+                }
+                $('#img').attr('src', arr[i].url);
+                $('#img').fadeIn(500)
+                $('#p1').text(arr[i].tip)
+
+
+            })
+        })
+
+    </script>
+</body>
+
+</html>

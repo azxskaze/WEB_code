@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 固定背景图片的位置 */
+        img {
+            width: 100%;
+            position: fixed;
+            opacity: 0.7;
+        }
+
+        #log {
+            width: 300px;
+            height: 200px;
+            border: solid 1px #eee;
+            background-color: white;
+            border-radius: 8px;
+            position: absolute;
+            left: 50%;
+            margin-left: -150px;
+            top: 50%;
+            margin-top: -100px;
+        }
+
+        #log div {
+            margin: 15px;
+
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <img src="./blog_new/images/b.jpg" alt="">
+
+    <div id="log">
+        <!-- <p>登录</p>  login()函数来检测用户名或密码是否为空（return不能少）-->
+        <form action="" onsubmit='return login();'>
+            <div>
+                <input type="text" placeholder="请输入用户名" name="username" id="username">
+
+                <input type="password" placeholder="请输入密码" name="userpass" id="userpass">
+            </div>
+            <div>
+                <input id="ok" type="checkbox" name="ok">记住用户名
+            </div>
+            <div>
+                <input id="log1" type="submit" value="登录">
+            </div>
+        </form>
+
+    </div>
+    <script>
+        function login() {
+            // 获取到用户名和密码，如果用户名和密码存在返回true，如果有一个不存在就返回false
+            var $username = $('#username');
+            var $userpass = $('#userpass');
+            if ($username.val() != '' && $userpass.val() != '') {
+                // 如果复选框被选中
+                if ($('#ok').prop('checked')) {
+                    // 将用户名保存
+                    localStorage.setItem('username', $username.val());
+
+                } else {
+                    // 删除已保存的用户名
+                    localStorage.removeItem('username');
+                }
+                return true;
+            }
+            else {
+                // 如果用户名输入内容为空
+                if ($username.val() == '') {
+
+                    alert('用户名不能为空');
+                    // 获取用户名输入框的焦点
+                    $username[0].focus();
+                    return false;
+                }
+                else {
+                    alert('密码不能为空');
+                    // 获取密码输入框的焦点
+                    $userpass[0].focus();
+                    return false;
+                }
+            }
+        }
+        //页面加载完成
+        $(function () {
+            console.log("adf")
+            //获取本地存储的数据
+            if (localStorage.getItem("username")) {
+                var _name = localStorage.getItem("username");
+                //找到文本框对象，并赋值
+                $("#username").val(_name);
+            }
+        })
+
+    </script>
+</body>
+
+</html>

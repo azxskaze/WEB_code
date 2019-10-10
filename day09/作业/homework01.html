@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            width: 120px;
+            height: 300px;
+            list-style: none;
+            overflow: hidden;
+            border-top: solid 1px #666;
+            border-left: solid 1px #666;
+            position: relative;
+
+
+        }
+
+        ul>li {
+            display: block;
+            overflow: hidden;
+            width: 120px;
+            height: 20px;
+        }
+
+        span {
+            /* display: block;
+            float: left; */
+
+            margin: 0;
+            padding: 0;
+            border-right: solid 1px #666;
+            border-bottom: solid 1px #666;
+
+        }
+
+        .box {
+            margin: 0;
+            padding: 0;
+            width: 18px;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+        }
+
+        .t {
+            position: absolute;
+            left: 20px;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+    <script src="../js/jquery.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li><span>
+                <input type="checkbox" name="all" id="all" class="box">
+            </span>
+            <span class="t">编程语言</span>
+        </li>
+        <li><span>
+                <input type="checkbox" name="all" class="box">
+            </span>
+            <span class="t">python</span></li>
+        <li><span>
+                <input type="checkbox" name="all" class="box">
+            </span>
+            <span class="t">java</span></li>
+        <li><span>
+                <input type="checkbox" name="all" class="box">
+            </span>
+            <span class="t">c++</span></li>
+        <li><span>
+                <input type="checkbox" name="all" class="box">
+            </span>
+            <span class="t">c#</span></li>
+        <li><span>
+                <input type="checkbox" name="all" class="box">
+            </span>
+            <span class="t">php</span></li>
+
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- 添加一个按钮保存输入的值 -->
+    <div>
+        <input id="num" type="text">
+        <select name="num2" id="num2">
+            <option value="1">小学</option>
+            <option value="2">中学</option>
+            <option value="3">大学</option>
+
+
+        </select>
+        <button id="btn">保存</button>
+
+        <button id="btn2">读取</button>
+
+    </div>
+    <script>
+        var $num = $('#num')
+        var $num2 = $('#num2')
+
+
+
+
+        var $btn = $('#btn')
+        var $btn2 = $('#btn2')
+
+        // 按钮绑定单击事件
+        $btn.on('click', function () {
+            // 显示一下
+            console.log($num.val(), $num2.val())
+
+            // 调用本地存储对象，将值存储起来
+            // localStorage.setItem('data', $num.val() + '&' + $num2.val())
+
+            // 定义一个对象
+            var obj = {}
+            // 将两个值保存到对象当中
+            obj.a = $num.val()
+            obj.b = $num2.val()
+
+            // 将对象转换成字符串
+            var chrobj = JSON.stringify(obj);
+            // 将对象保存到本地存储中(只能保存字符串)
+            localStorage.setItem('data', chrobj)
+
+            // localStorage.setItem('data', { 'a': $num.val(), 'b': $num2.val() })
+
+        })
+        $btn2.on('click', function () {
+            // 获取刚才保存的值
+            // var temp = localStorage.getItem('data').split('&')
+            var temp = localStorage.getItem('data')
+            // 将字符串转化为对象
+            var objtemp = JSON.parse(temp)
+            console.log(objtemp.a, objtemp.b)
+            $num.val(objtemp.a)
+        })
+        
+        
+    </script>
+</body>
+
+</html>
